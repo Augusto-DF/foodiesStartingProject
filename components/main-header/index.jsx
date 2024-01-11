@@ -1,16 +1,27 @@
 import Link from "next/link";
+import Image from "next/image";
 import logo from "@/assets/logo.png";
+
+import styles from "./styles.module.css";
+
 const MainHeader = () => {
   return (
-    <header>
-      <Link href="/">
-        <img src={logo.src} alt="Logo" />
+    <header className={styles.header}>
+      <Link href="/" className={styles.logo}>
+        <Image
+          /* loading="lazy" */
+          width={1024}
+          height={1024}
+          src={logo.src}
+          alt="Logo"
+          priority
+        />
         NextLevel Food
       </Link>
 
-      <nav>
+      <nav className={styles.nav}>
         <ul>
-          <li>
+          <li className={styles.active}>
             <Link href="/meals">Browse Meals</Link>
           </li>
           <li>
