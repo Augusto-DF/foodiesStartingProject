@@ -1,5 +1,5 @@
-import { getMeals } from "@/lib/meals";
 import { Suspense } from "react";
+import { getMeals } from "@/lib/meals";
 import MealsLoadingPage from "./loading-meals";
 
 const MealsData = async () => {
